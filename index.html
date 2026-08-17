@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#090908" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="description"
+      content="Vestigium apresenta Caso 01 — A Última Fotografia, um jogo de investigação físico com documentos, fotografias, códigos, enigmas e evidências."
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Vestigium" />
+    <meta property="og:title" content="Caso 01 — A Última Fotografia | Vestigium" />
+    <meta
+      property="og:description"
+      content="Abra o arquivo. Analise as evidências. Descubra a verdade."
+    />
+    <meta property="og:image" content="./imagens/section-offer-product.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Caso 01 — A Última Fotografia | Vestigium" />
+    <meta
+      name="twitter:description"
+      content="Uma experiência física de investigação, mistério e enigmas."
+    />
+    <meta name="twitter:image" content="./imagens/section-offer-product.png" />
+
+    <!-- TODO_SEO: adicionar canonical absoluto quando o domínio oficial existir. -->
+    <!-- Dados estruturados de Product aguardam preço, disponibilidade e URL oficiais. -->
+
+    <title>Caso 01 — A Última Fotografia | Vestigium</title>
+    <link rel="icon" type="image/png" href="./imagens/logo-symbol-dark.png" />
+    <link
+      rel="preload"
+      as="image"
+      href="./imagens/ezgif-frame-001.png"
+      fetchpriority="high"
+    />
+    <link rel="stylesheet" href="./styles.css?v=20260803-18" />
+    <script src="./vendor/gsap.min.js" defer></script>
+    <script src="./vendor/ScrollTrigger.min.js" defer></script>
+    <script src="./vendor/CustomEase.min.js" defer></script>
+    <script src="./vendor/SplitText.min.js" defer></script>
+    <script src="./content.js?v=20260803-18" defer></script>
+    <script src="./script.js?v=20260803-18" defer></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#conteudo">Ir direto para o conteúdo</a>
+
+    <header class="site-header">
+      <nav class="navigation" aria-label="Navegação principal">
+        <a class="navigation__brand" href="#conteudo" aria-label="Vestigium — início">
+          <img src="./imagens/logo-symbol-dark.png" alt="" width="28" height="28" />
+          <span>Vestigium</span>
+        </a>
+        <div class="navigation__links">
+          <a href="#caso">O caso</a>
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <a class="button button--compact" href="#oferta">Investigar</a>
+      </nav>
+    </header>
+
+    <section class="intro" id="intro" aria-label="Abertura do Caso 01" data-intro>
+      <div class="intro__sticky">
+        <canvas id="sequence" class="intro__canvas" aria-hidden="true"></canvas>
+        <img
+          class="intro__fallback"
+          src="./imagens/ezgif-frame-001.png"
+          alt=""
+          width="1920"
+          height="1080"
+          fetchpriority="high"
+        />
+        <div class="intro__shade" aria-hidden="true"></div>
+
+        <div class="intro__topbar">
+          <a class="text-action" href="#conteudo" data-skip-intro>Pular introdução</a>
+        </div>
+
+        <div class="intro__prompt" aria-hidden="true">
+          <span class="intro__progress"><i></i></span>
+          <span>Role para abrir o caso</span>
+        </div>
+
+        <div class="intro__case" data-intro-case>
+          <p class="case-stamp">Arquivo confidencial · Caso 01</p>
+          <h1>A Última<br />Fotografia</h1>
+          <p class="intro__synopsis">
+            Quatro amigos. Um chalé isolado.<br />Uma fotografia que não deveria existir.
+          </p>
+          <div class="button-row">
+            <a class="button button--primary" href="#oferta">Quero investigar</a>
+            <a class="button button--ghost" href="#caso">Conhecer o caso</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="site" id="conteudo" tabindex="-1">
+      <main>
+        <section class="section case-overview" id="caso" aria-labelledby="caso-title">
+          <div class="case-overview__visual" aria-hidden="true">
+            <img
+              src="./imagens/section-case-overview.png"
+              alt=""
+              width="1536"
+              height="1024"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="section__inner overview-grid" data-reveal data-report-reveal>
+            <div class="overview-copy">
+              <div class="report-kicker">
+                <p class="eyebrow">Relatório preliminar · 001</p>
+                <span class="report-register">REG. VTG–01 / AUT. A</span>
+              </div>
+              <h2 class="report-title" id="caso-title">
+                <span class="report-title__line"><span>Todo detalhe pode</span></span>
+                <span class="report-title__line"><span>ser uma pista.</span></span>
+              </h2>
+              <p class="lead">
+                Em <em>A Última Fotografia</em>, vocês assumem o papel dos investigadores.
+                Dentro do caso, documentos, fotografias, códigos e relatos conduzem a uma
+                história que só pode ser compreendida quando
+                <span class="report-mark">todas as evidências</span> forem reunidas.
+              </p>
+              <p>
+                Observem em conjunto, confrontem versões e conectem aquilo que parece isolado.
+                A resposta não está em uma única pista — está no vestígio que o grupo quase deixou
+                passar.
+              </p>
+            </div>
+
+            <aside class="case-file" aria-label="Informações do Caso 01" data-case-file>
+              <div class="case-file__head">
+                <span>Ficha do caso</span>
+                <strong>01/VTG</strong>
+              </div>
+              <dl>
+                <div>
+                  <dt>Equipe</dt>
+                  <dd>2 a 5 jogadores</dd>
+                </div>
+                <div>
+                  <dt>Duração</dt>
+                  <dd>45 a 60 minutos</dd>
+                </div>
+                <div>
+                  <dt>Formato</dt>
+                  <dd>Experiência investigativa física</dd>
+                </div>
+                <div>
+                  <dt>Competências</dt>
+                  <dd>Lógica, observação e trabalho em equipe</dd>
+                </div>
+              </dl>
+              <span class="case-file__mark" aria-hidden="true">Análise autorizada</span>
+            </aside>
+          </div>
+        </section>
+
+        <section class="section evidence" id="conteudo-do-caso" aria-labelledby="evidence-title">
+          <div class="section__inner">
+            <div class="section-heading" data-reveal>
+              <p class="eyebrow">Inventário de evidências</p>
+              <h2 id="evidence-title">O que existe dentro do caso</h2>
+              <p>
+                Um conjunto físico criado para ser manuseado, comparado e reorganizado enquanto a
+                investigação avança.
+              </p>
+            </div>
+
+            <div class="evidence-layout" data-evidence-inventory>
+              <figure
+                class="evidence-visual"
+                id="evidence-visual"
+                data-active-index="1"
+                data-reveal
+              >
+                <div class="evidence-visual__media" data-asset-slot="evidence-inventory-main">
+                  <img
+                    src="./imagens/section-case-contents.png"
+                    alt="Materiais físicos do Caso 01 organizados sobre uma mesa: dossiê, envelope, documentos, fotografias, planta, anotações e evidências."
+                    width="1586"
+                    height="992"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="evidence-visual__label evidence-visual__label--top" aria-hidden="true">
+                    VISUAL / INVENTÁRIO
+                  </span>
+                  <span class="evidence-visual__label evidence-visual__label--bottom" aria-hidden="true">
+                    ARQ. OFICIAL · 01
+                  </span>
+
+                  <span class="evidence-hotspot" data-evidence-hotspot="1" style="--hotspot-x: 61%; --hotspot-y: 29%; --line-angle: 8deg" aria-hidden="true"><b>01</b></span>
+                  <span class="evidence-hotspot" data-evidence-hotspot="2" style="--hotspot-x: 62%; --hotspot-y: 67%; --line-angle: -8deg" aria-hidden="true"><b>02</b></span>
+                  <span class="evidence-hotspot" data-evidence-hotspot="3" style="--hotspot-x: 77%; --hotspot-y: 85%; --line-angle: 4deg" aria-hidden="true"><b>03</b></span>
+                  <span class="evidence-hotspot" data-evidence-hotspot="4" style="--hotspot-x: 43%; --hotspot-y: 73%; --line-angle: -5deg" aria-hidden="true"><b>04</b></span>
+                  <span class="evidence-hotspot" data-evidence-hotspot="5" style="--hotspot-x: 63%; --hotspot-y: 31%; --line-angle: 7deg" aria-hidden="true"><b>05</b></span>
+                  <span class="evidence-hotspot" data-evidence-hotspot="6" style="--hotspot-x: 41%; --hotspot-y: 27%; --line-angle: -4deg" aria-hidden="true"><b>06</b></span>
+                </div>
+                <figcaption>
+                  <span>Registro visual · material oficial disponível</span>
+                  <span>ARQ. VTG / 01</span>
+                </figcaption>
+              </figure>
+
+              <div class="evidence-inventory" data-reveal>
+                <div class="evidence-inventory__head">
+                  <span>Catálogo físico</span>
+                  <strong>06 registros</strong>
+                </div>
+                <ol class="evidence-list">
+                  <li class="is-active">
+                    <button type="button" data-evidence-index="1" aria-controls="evidence-visual" aria-pressed="true">
+                      <span class="evidence-item__number">01</span>
+                      <span class="evidence-item__copy">
+                        <strong>Cartas e documentos</strong>
+                        <span class="evidence-item__description">Registros escritos para leitura, comparação e organização do caso.</span>
+                      </span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" data-evidence-index="2" aria-controls="evidence-visual" aria-pressed="false">
+                      <span class="evidence-item__number">02</span>
+                      <span class="evidence-item__copy">
+                        <strong>Fotografias</strong>
+                        <span class="evidence-item__description">Imagens que pedem observação cuidadosa de composição e detalhes.</span>
+                      </span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" data-evidence-index="3" aria-controls="evidence-visual" aria-pressed="false">
+                      <span class="evidence-item__number">03</span>
+                      <span class="evidence-item__copy">
+                        <strong>Pistas e evidências</strong>
+                        <span class="evidence-item__description">Elementos físicos a serem relacionados com o restante do arquivo.</span>
+                      </span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" data-evidence-index="4" aria-controls="evidence-visual" aria-pressed="false">
+                      <span class="evidence-item__number">04</span>
+                      <span class="evidence-item__copy">
+                        <strong>Anotações e relatos</strong>
+                        <span class="evidence-item__description">Informações para confrontar versões e estabelecer conexões.</span>
+                      </span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" data-evidence-index="5" aria-controls="evidence-visual" aria-pressed="false">
+                      <span class="evidence-item__number">05</span>
+                      <span class="evidence-item__copy">
+                        <strong>Cifras e códigos</strong>
+                        <span class="evidence-item__description">Sequências e símbolos que exigem interpretação do grupo.</span>
+                      </span>
+                    </button>
+                  </li>
+                  <li>
+                    <button type="button" data-evidence-index="6" aria-controls="evidence-visual" aria-pressed="false">
+                      <span class="evidence-item__number">06</span>
+                      <span class="evidence-item__copy">
+                        <strong>Envelopes do caso</strong>
+                        <span class="evidence-item__description">Peças que agrupam e identificam os materiais da investigação.</span>
+                      </span>
+                    </button>
+                  </li>
+                </ol>
+              </div>
+            </div>
+
+            <p class="disclosure" data-reveal>
+              Conteúdo apresentado sem revelar elementos decisivos da investigação.
+            </p>
+          </div>
+        </section>
+
+        <section class="section procedure" id="como-funciona" aria-labelledby="procedure-title">
+          <div class="procedure__visual" aria-hidden="true">
+            <img
+              src="./imagens/section-how-it-works.png"
+              alt=""
+              width="1774"
+              height="887"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="section__inner">
+            <div class="section-heading section-heading--split" data-reveal>
+              <div>
+                <p class="eyebrow">Procedimento de campo</p>
+                <h2 id="procedure-title">Como funciona</h2>
+              </div>
+              <p>Uma investigação completa em três movimentos claros.</p>
+            </div>
+
+            <div class="procedure-sequence" data-procedure>
+              <div class="steps__progress" aria-hidden="true"><span></span></div>
+              <ol class="steps" aria-label="Procedimento investigativo em três etapas">
+              <li tabindex="0">
+                <div class="steps__meta">
+                  <span class="steps__number">01</span>
+                  <span class="steps__glyph steps__glyph--seal" aria-hidden="true"></span>
+                </div>
+                <div class="steps__copy">
+                  <h3>Abra o caso</h3>
+                  <p class="steps__description">Reúna o grupo, organize os materiais e leia as instruções iniciais.</p>
+                  <p class="steps__micro">O arquivo é aberto.</p>
+                </div>
+              </li>
+              <li tabindex="0">
+                <div class="steps__meta">
+                  <span class="steps__number">02</span>
+                  <span class="steps__glyph steps__glyph--document" aria-hidden="true"></span>
+                </div>
+                <div class="steps__copy">
+                  <h3>Analise as evidências</h3>
+                  <p class="steps__description">
+                    Observe documentos, interprete códigos e conecte informações aparentemente
+                    isoladas.
+                  </p>
+                  <p class="steps__micro">As versões são confrontadas.</p>
+                </div>
+              </li>
+              <li tabindex="0">
+                <div class="steps__meta">
+                  <span class="steps__number">03</span>
+                  <span class="steps__glyph steps__glyph--conclusion" aria-hidden="true"></span>
+                </div>
+                <div class="steps__copy">
+                  <h3>Descubra a verdade</h3>
+                  <p class="steps__description">
+                    Formule sua conclusão e verifique se a investigação chegou à resposta correta.
+                  </p>
+                  <p class="steps__micro">A verdade é registrada.</p>
+                </div>
+              </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="section experience"
+          id="experiencia"
+          aria-labelledby="experience-title"
+          data-experience
+        >
+          <div class="experience__image" data-asset-slot="experience-background" aria-hidden="true">
+            <img
+              src="./imagens/section-table-experience.png"
+              alt=""
+              width="1672"
+              height="941"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="section__inner experience__content">
+            <div class="experience__copy">
+              <p class="eyebrow">Experiência Vestigium</p>
+              <h2 id="experience-title">Uma história que acontece sobre a mesa.</h2>
+              <p class="lead">
+                Vestigium não é apenas um conjunto de quebra-cabeças. É uma experiência construída
+                para transformar uma mesa, alguns documentos e um grupo de amigos em uma
+                investigação completa.
+              </p>
+            </div>
+            <ul class="experience-points" aria-label="Características da experiência">
+              <li>
+                <span class="experience-points__code" aria-hidden="true">OBS. 01</span>
+                <span class="experience-points__text">Narrativa integrada aos enigmas</span>
+              </li>
+              <li>
+                <span class="experience-points__code" aria-hidden="true">OBS. 02</span>
+                <span class="experience-points__text">Materiais físicos para investigar</span>
+              </li>
+              <li>
+                <span class="experience-points__code" aria-hidden="true">OBS. 03</span>
+                <span class="experience-points__text">Decisões construídas em grupo</span>
+              </li>
+              <li>
+                <span class="experience-points__code" aria-hidden="true">OBS. 04</span>
+                <span class="experience-points__text">Sensação real de descoberta</span>
+              </li>
+              <li>
+                <span class="experience-points__code" aria-hidden="true">OBS. 05</span>
+                <span class="experience-points__text">Uma experiência para jogar com amigos</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section
+          class="section investigation-level"
+          id="nivel"
+          aria-labelledby="level-title"
+          data-analysis
+        >
+          <div class="investigation-level__visual" aria-hidden="true">
+            <img
+              src="./imagens/section-investigation-level.png"
+              alt=""
+              width="1448"
+              height="1086"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="section__inner level-grid">
+            <div class="section-heading" data-reveal>
+              <p class="eyebrow">Classificação técnica</p>
+              <h2 id="level-title">Nível da investigação</h2>
+              <p>
+                Uma leitura objetiva da experiência para que o grupo saiba o que levar para a mesa.
+              </p>
+            </div>
+
+            <div class="analysis-card">
+              <div class="analysis-card__code">ANL/01 · VESTIGIUM</div>
+              <div class="analysis-card__legend" aria-hidden="true">
+                <span>Referência técnica</span><span>Base</span><span>Interm.</span><span>Alta</span>
+              </div>
+              <dl class="metrics">
+                <div>
+                  <dt><span aria-hidden="true">CR.01</span>Observação</dt>
+                  <dd>
+                    <span class="meter" role="img" aria-label="Observação: alta"><i style="--value: 88%"></i></span>
+                    <b>Alta</b>
+                  </dd>
+                </div>
+                <div>
+                  <dt><span aria-hidden="true">CR.02</span>Lógica</dt>
+                  <dd>
+                    <span class="meter" role="img" aria-label="Lógica: intermediária"><i style="--value: 62%"></i></span>
+                    <b>Intermediária</b>
+                  </dd>
+                </div>
+                <div>
+                  <dt><span aria-hidden="true">CR.03</span>Cooperação</dt>
+                  <dd>
+                    <span class="meter" role="img" aria-label="Cooperação: recomendada"><i style="--value: 76%"></i></span>
+                    <b>Recomendada</b>
+                  </dd>
+                </div>
+                <div>
+                  <dt><span aria-hidden="true">CR.04</span>Imersão</dt>
+                  <dd>
+                    <span class="meter" role="img" aria-label="Imersão: alta"><i style="--value: 90%"></i></span>
+                    <b>Alta</b>
+                  </dd>
+                </div>
+              </dl>
+              <div class="analysis-card__facts">
+                <span><small>Duração</small><strong>45–60</strong><em>minutos</em></span>
+                <span><small>Jogadores</small><strong>2–5</strong></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section audience" id="para-quem" aria-labelledby="audience-title">
+          <div class="audience__visual" aria-hidden="true">
+            <img
+              src="./imagens/section-audience.png"
+              alt=""
+              width="1254"
+              height="1254"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="section__inner">
+            <div class="section-heading section-heading--center" data-reveal>
+              <p class="eyebrow">Perfis de interesse</p>
+              <h2 id="audience-title">Para quem segue as pistas</h2>
+            </div>
+            <div class="audience-grid">
+              <article class="audience-profile audience-profile--fragments" tabindex="0" data-reveal>
+                <span class="audience-profile__texture" aria-hidden="true"></span>
+                <span class="audience-profile__number">01</span>
+                <h3>Caçadores de mistérios</h3>
+                <p class="audience-profile__description">Para quem encontra prazer em enigmas, padrões e perguntas ainda sem resposta.</p>
+                <p class="audience-profile__note">Cada detalhe importa.</p>
+              </article>
+              <article class="audience-profile audience-profile--connections" tabindex="0" data-reveal>
+                <span class="audience-profile__texture" aria-hidden="true"></span>
+                <span class="audience-profile__number">02</span>
+                <h3>Grupos de amigos</h3>
+                <p class="audience-profile__description">Uma noite diferente, construída por conversa, observação e hipóteses improváveis.</p>
+                <p class="audience-profile__note">Hipóteses são melhores em conjunto.</p>
+              </article>
+              <article class="audience-profile audience-profile--coordinates" tabindex="0" data-reveal>
+                <span class="audience-profile__texture" aria-hidden="true"></span>
+                <span class="audience-profile__number">03</span>
+                <h3>Fãs de escape rooms</h3>
+                <p class="audience-profile__description">A tensão colaborativa de uma investigação imersiva, agora sobre a própria mesa.</p>
+                <p class="audience-profile__note">A investigação começa onde a sala termina.</p>
+              </article>
+              <article class="audience-profile audience-profile--photograph" tabindex="0" data-reveal>
+                <span class="audience-profile__texture" data-asset-slot="audience-photo-fragment" aria-hidden="true"></span>
+                <span class="audience-profile__number">04</span>
+                <h3>Casais e famílias</h3>
+                <p class="audience-profile__description">Para quem prefere descobrir a resposta em equipe e dividir cada nova suspeita.</p>
+                <p class="audience-profile__note">Uma noite para descobrir juntos.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section gallery" id="galeria" aria-labelledby="gallery-title">
+          <div class="section__inner">
+            <div class="section-heading section-heading--split" data-reveal>
+              <div>
+                <p class="eyebrow">Registros do arquivo</p>
+                <h2 id="gallery-title">Galeria do produto</h2>
+              </div>
+              <p>Examine os materiais. Nenhuma solução será revelada.</p>
+            </div>
+            <div class="gallery-grid" id="gallery-grid" aria-live="polite"></div>
+          </div>
+        </section>
+
+        <section class="section community" id="comunidade" aria-labelledby="community-title">
+          <div class="section__inner community__inner" data-reveal>
+            <p class="case-stamp">Desafio aberto</p>
+            <h2 id="community-title">Você consegue solucionar o Caso 01?</h2>
+            <p>
+              Novos enigmas e vestígios da investigação poderão ser publicados nos canais oficiais
+              da Vestigium.
+            </p>
+            <a class="text-link" href="#" data-config-link="instagram">
+              Acompanhar os enigmas no Instagram <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </section>
+
+        <section
+          class="section purchase"
+          id="oferta"
+          aria-labelledby="purchase-title"
+          data-purchase
+        >
+          <div class="purchase__visual" aria-hidden="true">
+            <img
+              src="./imagens/section-offer-product.png"
+              alt=""
+              width="1536"
+              height="1024"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="section__inner purchase-card">
+            <div class="purchase-card__copy">
+              <div class="purchase-card__kicker">
+                <p class="eyebrow">Arquivo disponível em breve</p>
+                <span class="purchase-card__register">VSTG · CASO 01</span>
+              </div>
+              <h2 id="purchase-title">Caso 01 — A Última Fotografia</h2>
+              <p class="lead">
+                Tudo o que vocês precisam para conduzir o caso estará dentro do arquivo.
+              </p>
+              <ul aria-label="Características confirmadas do Caso 01">
+                <li><span aria-hidden="true">01</span>Experiência investigativa física</li>
+                <li><span aria-hidden="true">02</span>Documentos, fotografias, pistas e códigos</li>
+                <li><span aria-hidden="true">03</span>Para grupos de 2 a 5 jogadores</li>
+                <li><span aria-hidden="true">04</span>Duração aproximada de 45 a 60 minutos</li>
+              </ul>
+            </div>
+
+            <div class="purchase-card__document-stack" id="purchase-panel" data-purchase-panel>
+              <div class="purchase-card__action">
+                <div class="purchase-card__action-header">
+                  <span class="purchase-card__label">Informação comercial</span>
+                  <span class="purchase-card__status" aria-hidden="true">Aguardando liberação</span>
+                </div>
+                <strong data-product-price>Preço em definição</strong>
+                <p data-product-availability>Disponibilidade em definição</p>
+                <div class="purchase-card__rule" aria-hidden="true"></div>
+                <a
+                  class="button button--primary button--wide purchase-card__cta"
+                  href="#"
+                  data-config-link="checkout"
+                  aria-describedby="purchase-helper"
+                >
+                  <span>Entrar na lista de investigadores</span>
+                </a>
+                <small id="purchase-helper">Seja avisado quando o Caso 01 estiver disponível.</small>
+                <!-- TODO_COMERCIAL: ao conectar a lista de espera, usar campo de e-mail com label visível, consentimento explícito e mensagens acessíveis via aria-live. -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section faq" id="faq" aria-labelledby="faq-title">
+          <div class="section__inner faq-grid">
+            <div class="section-heading" data-reveal>
+              <p class="eyebrow">Interrogatório rápido</p>
+              <h2 id="faq-title">Perguntas frequentes</h2>
+              <p>
+                Informações ainda não confirmadas estão identificadas para evitar conclusões
+                prematuras.
+              </p>
+            </div>
+            <div class="faq-list" id="faq-list" data-reveal></div>
+          </div>
+        </section>
+
+        <section class="section final-cta" id="encerramento" aria-labelledby="final-title">
+          <div class="section__inner final-cta__inner" data-final-reveal>
+            <span class="final-cta__line" aria-hidden="true"></span>
+            <p class="eyebrow">Fim do relatório preliminar</p>
+            <h2 id="final-title">O caso está esperando.</h2>
+            <p class="final-cta__copy">
+              As evidências foram reunidas. Agora, falta alguém capaz de interpretá-las.
+            </p>
+            <a class="button button--primary final-cta__button" href="#oferta">
+              Abrir o Caso 01
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer" id="rodape">
+        <div class="section__inner footer__archive" aria-label="Encerramento do arquivo">
+          <span class="footer__archive-line" aria-hidden="true"></span>
+          <span class="footer__archive-status">Arquivo encerrado</span>
+          <span class="footer__archive-code">VSTG · CASO 01 / PÁG. 01–01</span>
+        </div>
+
+        <div class="section__inner footer__grid">
+          <div class="footer__identity">
+            <div class="footer__identity-mark">
+              <img
+                class="footer__symbol"
+                src="./imagens/logo-symbol-dark.png"
+                alt=""
+                width="58"
+                height="58"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="footer__brand">Vestigium</span>
+            </div>
+            <p>Todo vestígio conta uma história.</p>
+          </div>
+
+          <div class="footer__group">
+            <p class="footer__label">Navegação</p>
+            <nav class="footer__nav" aria-label="Navegação do rodapé">
+              <a href="#caso">O caso</a>
+              <a href="#como-funciona">Como funciona</a>
+              <a href="#galeria">Galeria</a>
+              <a href="#faq">FAQ</a>
+            </nav>
+          </div>
+
+          <div class="footer__group">
+            <p class="footer__label">Canais</p>
+            <nav class="footer__nav" aria-label="Canais oficiais">
+              <a href="#" data-config-link="instagram">Instagram</a>
+              <a href="#" data-config-link="contact">Contato</a>
+            </nav>
+          </div>
+
+          <div class="footer__group">
+            <p class="footer__label">Institucional</p>
+            <nav class="footer__nav" aria-label="Links institucionais">
+              <a href="#" data-config-link="privacy">Política de privacidade</a>
+              <a href="#" data-config-link="terms">Termos de uso</a>
+            </nav>
+          </div>
+        </div>
+        <div class="section__inner footer__bottom">
+          <span>© <span data-current-year></span> Vestigium. Direitos reservados.</span>
+          <span>Vestigium e Caso 01 são identificações da marca.</span>
+        </div>
+      </footer>
+    </div>
+
+    <dialog class="lightbox" id="gallery-lightbox" aria-modal="true" aria-labelledby="lightbox-caption">
+      <button class="lightbox__close" type="button" aria-label="Fechar imagem ampliada">×</button>
+      <button class="lightbox__nav lightbox__nav--previous" type="button" aria-label="Imagem anterior">
+        ←
+      </button>
+      <figure>
+        <img id="lightbox-image" src="" alt="" width="1920" height="1080" decoding="async" />
+        <figcaption id="lightbox-caption" aria-live="polite"></figcaption>
+      </figure>
+      <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Próxima imagem">
+        →
+      </button>
+    </dialog>
+
+    <p class="status-message" id="action-status" aria-live="polite" aria-atomic="true"></p>
+
+    <noscript>
+      <style>
+        .intro { height: 100svh; }
+        .intro__fallback { opacity: 1; }
+        .intro__case { opacity: 1; transform: none; pointer-events: auto; }
+        .intro__prompt { display: none; }
+        #gallery-grid::before { content: "Ative o JavaScript para visualizar a galeria ampliada."; }
+      </style>
+    </noscript>
+  </body>
+</html>

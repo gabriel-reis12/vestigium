@@ -1,0 +1,17 @@
+{
+  "name": "vestigium-landing-page",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing page oficial da Vestigium — Caso 01.",
+  "scripts": {
+    "lint": "node --check content.js && node --check script.js && node --check server.mjs && node --check execution/validate.mjs && node --check execution/typecheck.mjs && node --check execution/build.mjs && node --check execution/browser-qa.mjs && node --check tests/landing.test.mjs && node execution/validate.mjs",
+    "typecheck": "node execution/typecheck.mjs",
+    "test": "node --test tests/landing.test.mjs",
+    "build": "node execution/build.mjs",
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "gsap": "^3.15.0"
+  }
+}

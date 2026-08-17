@@ -18,6 +18,11 @@ for (const file of sourceFiles) {
 
 await cp(resolve(root, "imagens"), resolve(output, "imagens"), { recursive: true });
 await cp(resolve(root, "vendor"), resolve(output, "vendor"), { recursive: true });
+try {
+  await cp(resolve(root, "video"), resolve(output, "video"), { recursive: true });
+} catch {
+  // pasta de vídeo opcional
+}
 
 const html = await readFile(resolve(output, "index.html"), "utf8");
 if (!html.includes("./imagens/ezgif-frame-001.png")) {

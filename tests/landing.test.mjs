@@ -32,9 +32,24 @@ test("a landing possui a arquitetura semântica principal", async () => {
 test("a sequência de abertura contém todos os 267 quadros", async () => {
   await Promise.all(
     Array.from({ length: 267 }, (_, index) =>
-      access(resolve(root, "imagens", `ezgif-frame-${String(index + 1).padStart(3, "0")}.png`)),
+      access(
+        resolve(
+          root,
+          "imagens",
+          "intro-frames",
+          `frame-${String(index + 1).padStart(3, "0")}.jpg`,
+        ),
+      ),
     ),
   );
+});
+
+test("a abertura limita memoria e antecipa somente quadros proximos", async () => {
+  const source = await readFile(resolve(root, "script.js"), "utf8");
+  assert.match(source, /FRAME_CACHE_LIMIT = 24/);
+  assert.match(source, /FRAME_LOOKAHEAD = 7/);
+  assert.match(source, /intro-frames\/frame-/);
+  assert.doesNotMatch(source, /FRAME_CACHE_LIMIT = 267/);
 });
 
 test("o conteúdo comercial segue as diretrizes oficiais", async () => {

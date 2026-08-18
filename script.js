@@ -450,7 +450,7 @@ function setupIntro() {
   });
 
   if (staticIntro) {
-    fallback.src = "./imagens/ezgif-frame-267.png";
+    fallback.src = "./imagens/intro-frames/frame-267.jpg";
     intro.dataset.renderMode = "static";
     intro.classList.add("intro--static", "intro--case-visible");
     intro.style.setProperty("--case-reveal", "1");
@@ -458,9 +458,9 @@ function setupIntro() {
   }
 
   const FRAME_COUNT = 267;
-  const FRAME_CACHE_LIMIT = 267;
-  const FRAME_LOOKAHEAD = 30;
-  const EASING = 14;
+  const FRAME_CACHE_LIMIT = 24;
+  const FRAME_LOOKAHEAD = 7;
+  const EASING = 11;
   const cache = new Map();
   const loading = new Map();
 
@@ -473,14 +473,17 @@ function setupIntro() {
   let introVisible = true;
   let animationFrameId = null;
   let resizeQueued = false;
+  let scrollQueued = false;
   let warmTimer;
 
   intro.dataset.renderMode = "discrete";
+  intro.dataset.frameFormat = "jpeg";
+  intro.dataset.frameCacheLimit = String(FRAME_CACHE_LIMIT);
 
   const frameSource = (index) =>
-    `./imagens/ezgif-frame-${String(index + 1).padStart(3, "0")}.png`;
+    `./imagens/intro-frames/frame-${String(index + 1).padStart(3, "0")}.jpg`;
 
-  function loadFrame(index) {
+  function loadFrame(index, priority = "auto") {
     const boundedIndex = Math.max(0, Math.min(FRAME_COUNT - 1, index));
 
     if (cache.has(boundedIndex)) return Promise.resolve(cache.get(boundedIndex));
@@ -489,6 +492,7 @@ function setupIntro() {
     const request = new Promise((resolve, reject) => {
       const image = new Image();
       image.decoding = "async";
+      image.fetchPriority = priority;
 
       image.onload = () => {
         image.dataset.frameIndex = String(boundedIndex);
@@ -532,9 +536,9 @@ function setupIntro() {
       const primary = center + offset * direction;
       const secondary = center - offset * direction;
 
-      if (primary >= 0 && primary < FRAME_COUNT) loadFrame(primary).catch(() => {});
+      if (primary >= 0 && primary < FRAME_COUNT) loadFrame(primary, "low").catch(() => {});
       if (secondary >= 0 && secondary < FRAME_COUNT && secondary !== primary) {
-        loadFrame(secondary).catch(() => {});
+        loadFrame(secondary, "low").catch(() => {});
       }
     }
   }
@@ -620,7 +624,7 @@ function setupIntro() {
     const center = Math.round(targetFrame);
     const frameJump = Math.abs(targetFrame - renderedFrame);
 
-    loadFrame(center)
+    loadFrame(center, "high")
       .then(() => {
         if (Math.round(targetFrame) !== center) return;
         if (frameJump > 8 || progress > 0.97) renderedFrame = targetFrame;
@@ -628,7 +632,7 @@ function setupIntro() {
         lastPaintedFrame = Math.round(renderedFrame);
       })
       .catch(() => {});
-    loadFrame(center + direction).catch(() => {});
+    loadFrame(center + direction, "high").catch(() => {});
 
     window.clearTimeout(warmTimer);
     warmTimer = window.setTimeout(() => warmFrames(center, direction), 45);
@@ -640,6 +644,8 @@ function setupIntro() {
         // Sem impacto funcional.
       }
     }
+
+    if (introVisible) startAnimation();
   }
 
   function animate(timestamp) {
@@ -650,7 +656,8 @@ function setupIntro() {
     const smoothing = 1 - Math.exp(-EASING * deltaTime);
     renderedFrame += (targetFrame - renderedFrame) * smoothing;
 
-    if (Math.abs(targetFrame - renderedFrame) < 0.002) renderedFrame = targetFrame;
+    const settled = Math.abs(targetFrame - renderedFrame) < 0.002;
+    if (settled) renderedFrame = targetFrame;
 
     const paintKey = Math.round(renderedFrame);
     if (paintKey !== lastPaintedFrame) {
@@ -659,7 +666,7 @@ function setupIntro() {
     }
 
     lastTimestamp = timestamp;
-    animationFrameId = window.requestAnimationFrame(animate);
+    if (!settled) animationFrameId = window.requestAnimationFrame(animate);
   }
 
   function startAnimation() {
@@ -685,7 +692,18 @@ function setupIntro() {
     visibilityObserver.observe(intro);
   }
 
-  window.addEventListener("scroll", updateFromScroll, { passive: true });
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (scrollQueued) return;
+      scrollQueued = true;
+      window.requestAnimationFrame(() => {
+        updateFromScroll();
+        scrollQueued = false;
+      });
+    },
+    { passive: true },
+  );
   window.addEventListener("resize", () => {
     if (resizeQueued) return;
     resizeQueued = true;
@@ -1264,4 +1282,3 @@ setupSmoothAnchorLinks();
 setupSiteHeader();
 setupIntro();
 setupGSAPAnimations();
-

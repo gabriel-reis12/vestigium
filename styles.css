@@ -2075,7 +2075,7 @@ p {
 
 .audience-profile--photograph .audience-profile__texture {
   inset: 44px -18px 22px 36%;
-  background: url("./imagens/ezgif-frame-240.png") center / cover no-repeat;
+  background: url("./imagens/intro-frames/frame-240.jpg") center / cover no-repeat;
   filter: grayscale(0.75) blur(7px);
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 38%, #000 76%, transparent);
   mask-image: linear-gradient(90deg, transparent, #000 38%, #000 76%, transparent);

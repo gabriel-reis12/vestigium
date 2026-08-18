@@ -308,6 +308,8 @@ for (const scenario of scenarios) {
         const bounds = canvas.getBoundingClientRect();
         return {
           discreteFrames: intro.dataset.renderMode === "discrete",
+          optimizedFrameFormat: intro.dataset.frameFormat === "jpeg",
+          boundedFrameCache: Number(intro.dataset.frameCacheLimit) <= 24,
           highDensityBacking: canvas.width / bounds.width >= 1.99 && canvas.height / bounds.height >= 1.99,
           canvasReady: intro.classList.contains("intro--canvas-ready"),
           noSofteningFilter: getComputedStyle(canvas).filter === "none",
@@ -555,7 +557,7 @@ for (const scenario of scenarios) {
           getComputedStyle(profiles[0].querySelector(".audience-profile__texture"), "::before").content !== "none",
           getComputedStyle(profiles[1].querySelector(".audience-profile__texture")).backgroundImage !== "none",
           getComputedStyle(profiles[2].querySelector(".audience-profile__texture"), "::before").content !== "none",
-          getComputedStyle(profiles[3].querySelector(".audience-profile__texture")).backgroundImage.includes("ezgif-frame-240.png"),
+          getComputedStyle(profiles[3].querySelector(".audience-profile__texture")).backgroundImage.includes("intro-frames/frame-240.jpg"),
         ];
         return {
           fourColumns: new Set(profiles.map((item) => Math.round(item.getBoundingClientRect().top))).size === 1,

@@ -1,5 +1,13 @@
 # Histórico do projeto
 
+## 2026-08-17 — Otimização da sequência de abertura
+
+- Convertidos os 267 quadros da introdução para JPEG 1600 × 900 de alta qualidade, reduzindo o conjunto carregável de aproximadamente 240 MB para 26,6 MB.
+- Limitado o cache em memória a 24 quadros e o carregamento antecipado aos sete quadros mais próximos em cada direção.
+- Priorizado o quadro visível, agrupadas atualizações de rolagem por frame e pausado o loop de animação quando a sequência alcança o destino.
+- Excluídos os PNGs-fonte do pacote de produção, reduzindo o build estático de cerca de 270 MB para 71 MB sem apagar os originais do repositório.
+- Adicionadas validações automatizadas para formato otimizado, limite de cache, qualidade do canvas, quadro final e fallback de movimento reduzido.
+
 ## 2026-08-03 — Correção do handoff entre introdução e conteúdo
 
 - Corrigida a saída rápida da sequência para que o quadro final seja pintado imediatamente mesmo quando a rolagem salta muitos quadros.

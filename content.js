@@ -15,7 +15,7 @@ window.VESTIGIUM_CONTENT = Object.freeze({
 
   links: {
     checkout: null, // TODO_COMERCIAL: URL oficial de compra ou lista de espera.
-    instagram: null, // TODO_COMERCIAL: URL do Instagram da Vestigium.
+    instagram: "https://www.instagram.com/vestigium.games/",
     contact: null, // TODO_COMERCIAL: e-mail ou página oficial de contato.
     privacy: null, // TODO_LEGAL: URL da política de privacidade.
     terms: null, // TODO_LEGAL: URL dos termos de uso.

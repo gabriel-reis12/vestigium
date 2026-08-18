@@ -59,8 +59,10 @@ test("o conteúdo comercial segue as diretrizes oficiais", async () => {
   const { product, links, faq } = sandbox.window.VESTIGIUM_CONTENT;
 
   assert.equal(product.price, "R$ 87,90");
-  assert.equal(product.availability, null);
-  Object.values(links).forEach((value) => assert.equal(value, null));
+  assert.equal(links.instagram, "https://www.instagram.com/vestigium.games/");
+  for (const key of ["checkout", "contact", "privacy", "terms"]) {
+    assert.equal(links[key], null);
+  }
   assert.ok(Array.isArray(faq) && faq.length === 8);
   assert.ok(faq.every((item) => item.status === "confirmed"));
 });
